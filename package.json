@@ -1,6 +1,6 @@
 {
-  "name": "nodeTest",
-  "version": "1.0.0",
+  "name": "test-aws-bedrock-agent-sdk",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -12,7 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "@aws-sdk/client-bedrock-agent-runtime": "^3.734.0",
-    "dotenv": "^16.4.7",
-    "nodeTest": "link:"
+    "dotenv": "^16.4.7"
   }
 }
