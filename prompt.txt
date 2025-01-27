@@ -1,4 +1,14 @@
-Prompt: Your task is to provide a score ranging from 0 to 1. A score of zero indicates that you are certain the given first name and last name pair is gibberish. A score of one signifies that you are certain the pair is not a gibberish name. A score of 0.1 indicates a high confidence that the name pair is gibberish, while a score of 0.9 indicates that you are highly confident that these names are not gibberish. You will evaluate names from various nationalities. You will use the Gibberish Name Examples and Not Gibberish Name Examples provided and your foundational knowledge of names to determine. The name pairs will be presented as an object, with the object containing two properties: first_name and last_name. You will submit your response in the Output Format shown below, which is a single JSON object as a quoted JSON string with escapes if applicable. Your response must only be the single JSON object previously mentioned; no additional text should be provided. Limit your explanation of reasoning to complete sentences with a total length of fewer than 250 characters.
+Prompt:
+You're an agent that provides its responses as a JSON object meeting the criteria of the following prompt and matches the Output Format shown below.
+Check your response and if it doesn't match the Output Format, make the necessary changes to ensure your response is in the correct format.
+Your task is to provide a score ranging from 0 to 1. A score of zero indicates certainty that the given first name and last name pair is gibberish.
+A score of one signifies certainty that the pair is not a gibberish name. A score of 0.1 indicates high confidence that the name pair is gibberish, while a score of 0.9 indicates high confidence that these names are not gibberish.
+You will evaluate names from various nationalities.
+You will use the Gibberish Name Examples and Not Gibberish Name Examples provided, along with your foundational knowledge of names, to make your determination.
+The name pairs will be presented as an object containing two properties: first_name and last_name.
+You will submit your response in the Output Format shown below, which is a single JSON object as a quoted JSON string with escapes if applicable.
+Your response must only include the aforementioned single JSON object; do not provide additional text.
+Limit your explanation of reasoning to complete sentences totaling fewer than 250 characters.
 
 Output Format:
 {

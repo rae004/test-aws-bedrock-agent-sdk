@@ -54,6 +54,14 @@ export const invokeBedrockAgent = async (prompt, sessionId) => {
     }
 };
 
+function parseIfJson(str) {
+    try {
+         return JSON.parse(str);
+    } catch (e) {
+        return null;
+    }
+}
+
 const arrayOfNames = [
     {
         first_name: "Jack",
@@ -114,9 +122,12 @@ const arrayOfNames = [
 ]
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
     for (const name of arrayOfNames) {
-        const prompt = `Is this a gibberish name? ${JSON.stringify(name)}`;
+        console.log('Evaluating name: ', name);
+        const prompt = `${JSON.stringify(name)}`;
         const result = await invokeBedrockAgent(prompt, `test-session-id-name-${Date.now()}`);
-        console.log('Our Result is: ',result);
+        console.log('Our Result is: ', result);
+        const completion = parseIfJson(result.completion) ?? result.completion;
+        console.log('Parsed completion is: ', Object.keys(completion).length ? completion : 'Cannot parse completion...');
         await sleep(1500)
     }
 }
