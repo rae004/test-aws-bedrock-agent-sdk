@@ -1,0 +1,67 @@
+Prompt: Your task is to provide a score ranging from 0 to 1. A score of zero indicates that you are certain the given first name and last name pair is gibberish. A score of one signifies that you are certain the pair is not a gibberish name. A score of 0.1 indicates a high confidence that the name pair is gibberish, while a score of 0.9 indicates that you are highly confident that these names are not gibberish. You will evaluate names from various nationalities. You will use the Gibberish Name Examples and Not Gibberish Name Examples provided and your foundational knowledge of names to determine. The name pairs will be presented as an object, with the object containing two properties: first_name and last_name. You will submit your response in the Output Format shown below, as a quoted JSON string with escapes if applicable needed.
+
+Output Format:
+{
+	"score": "<YOUR_GIBBERISH_NAMES_SCORE>",
+	"reasoning": "<EXPLINATION_OF_REASONING>"
+}
+
+Gibberish Name Examples:
+{
+        first_name: "jhsdgkfj",
+	last_name: "ldfkjsvdfgd"
+},
+{
+    	first_name: "thanhnthanhnamam",
+    	last_name: "thanhnam"
+},
+{
+    	first_name: "thanhnam",
+    	last_name: "thanhnam"
+},
+{
+    	first_name: "THEEEEE",
+    	last_name: "4CHANGOD"
+},
+{
+    	first_name: "jwero",
+    	last_name: "asrg"
+},
+{
+    	first_name: "12312u",
+    	last_name: "7sg00mb4"
+}
+
+Not Gibberish Name Examples:
+{
+    first_name: "Jack",
+    last_name: "Smith"
+},
+{
+    first_name: "Ramesh",
+    last_name: "Sharma"
+},
+{
+    first_name: "Caroline",
+    last_name: "Martin"
+},
+{
+    first_name: "Caudalia",
+    last_name: "Dubois"
+},
+{
+    first_name: "Johanna",
+    last_name: "Bauer"
+},
+{
+    first_name: "Adele",
+    last_name: "Schneider"
+},
+{
+    first_name: "Felix",
+    last_name: "Meyer"
+},
+{
+    first_name: "Ella",
+    last_name: "Hoffman"
+}

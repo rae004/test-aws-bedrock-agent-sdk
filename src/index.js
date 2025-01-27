@@ -64,12 +64,20 @@ const arrayOfNames = [
         last_name: "Martin"
     },
     {
+        first_name: "12312u",
+        last_name: "7sg00mb4"
+    },
+    {
         first_name: "Caudalia",
         last_name: "Dubois"
     },
     {
         first_name: "Johanna",
         last_name: "Bauer"
+    },
+    {
+        first_name: "jwero",
+        last_name: "asrg"
     },
     {
         first_name: "Adele",
@@ -80,12 +88,12 @@ const arrayOfNames = [
         last_name: "Meyer"
     },
     {
-        first_name: "Ella",
-        last_name: "Hoffman"
+        first_name: "THEEEEE",
+        last_name: "4CHANGOD"
     },
     {
-        first_name: "Ramesh",
-        last_name: "Sharma"
+        first_name: "Ella",
+        last_name: "Hoffman"
     },
     {
         first_name: "thanhnthanhnamam",
@@ -94,6 +102,10 @@ const arrayOfNames = [
     {
         first_name: "thanhnam",
         last_name: "thanhnam"
+    },
+    {
+        first_name: "Ramesh",
+        last_name: "Sharma"
     },
     {
         first_name: "jhsdgkfj",
