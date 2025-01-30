@@ -5,7 +5,22 @@ import {
     InvokeAgentCommand,
 } from "@aws-sdk/client-bedrock-agent-runtime";
 
-const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+function sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function parseIfJson(str) {
+    try {
+        return JSON.parse(str);
+    } catch (e) {
+        return null;
+    }
+}
+
+function getRandomValue(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
 
 /**
  * @typedef {Object} ResponseBody
@@ -19,7 +34,7 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
  * @param {string} prompt - The prompt that you want the Agent to complete.
  * @param {string} sessionId - An arbitrary identifier for the session.
  */
-export const invokeBedrockAgent = async (prompt, sessionId) => {
+async function invokeBedrockAgent (prompt, sessionId) {
     const client = new BedrockAgentRuntimeClient({
         awsRegion: process.env.AWS_REGION,
     });
@@ -51,14 +66,6 @@ export const invokeBedrockAgent = async (prompt, sessionId) => {
         return { sessionId: sessionId, completion };
     } catch (err) {
         console.error(err);
-    }
-};
-
-function parseIfJson(str) {
-    try {
-         return JSON.parse(str);
-    } catch (e) {
-        return null;
     }
 }
 
@@ -128,6 +135,6 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
         console.log('Our Result is: ', result);
         const completion = parseIfJson(result.completion) ?? result.completion;
         console.log('Parsed completion is: ', Object.keys(completion).length ? completion : 'Cannot parse completion...');
-        await sleep(1500)
+        await sleep(getRandomValue(1500, 5000));
     }
 }
