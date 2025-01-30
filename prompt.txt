@@ -1,8 +1,8 @@
 Output Format:
 {
-	"name_pair": "<NAME_PAIR_BEING_EVALUATED>",
+	"name_pair": { "first_name": "<FIRST_NAME_BEING_EVALUATED>", "last_name": "<LAST_NAME_BEING_EVALUATED>" },
 	"score": "<YOUR_GIBBERISH_NAMES_SCORE>",
-	"reasoning": "<EXPLINATION_OF_REASONING>"
+	"reasoning": "<EXPLANATION_OF_REASONING>"
 }
 
 Prompt:
@@ -26,7 +26,7 @@ We kindly ask that you keep your explanation to just one or two complete sentenc
 Gibberish Name Examples:
 {
         first_name: "jhsdgkfj",
-	last_name: "ldfkjsvdfgd"
+	    last_name: "ldfkjsvdfgd"
 },
 {
     	first_name: "thanhnthanhnamam",
